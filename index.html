@@ -9,6 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#0f1117;color:#e8e0d0;font-family:'Georgia',serif}
@@ -59,6 +60,15 @@ body{background:#0f1117;color:#e8e0d0;font-family:'Georgia',serif}
   .progress-bar-header{width:50px!important}
 }
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@media print{
+  body *{visibility:hidden}
+  #print-area, #print-area *{visibility:visible}
+  #print-area{position:absolute;top:0;left:0;width:100%;padding:20px}
+  .no-print{display:none!important}
+}
+.export-btn{transition:all 0.2s;cursor:pointer}
+.export-btn:hover{opacity:0.8}
+.export-menu{animation:fadeIn 0.15s ease}
 </style>
 </head>
 <body>
@@ -991,53 +1001,154 @@ body{background:#0f1117;color:#e8e0d0;font-family:'Georgia',serif}
 {
 "numero": 7,
 "paso": "Paso 7",
-"titulo": "La Humildad",
-"descripcion": "Humildemente le pedimos que nos liberase de nuestras faltas.",
-"tema": "Pedir con humildad, no con vergüenza",
+"titulo": "Pedir Humildemente",
+"descripcion": "Humildemente le pedimos que nos liberase de nuestros defectos.",
+"tema": "Cinco formas en que buscamos afuera lo que solo Dios puede confirmar adentro",
 "color": "#5C7A3E",
-"completo": false,
+"completo": true,
+"tarea": [
+"¿Cuáles son tus miedos ante ser cambiado? Escribí acerca de estos, o hablá de ellos con otra persona.",
+"¿En qué formas te has visto ya cambiado? ¿Cuánto de ello tuviste que hacer vos? ¿Cuánto se te dio el poder para hacer? Reflexioná acerca de la naturaleza gradual y natural del cambio en tu vida.",
+"Escribí una carta a Dios, tal como lo concebís. En esa carta, hablá de lo que te molesta y lo que te gustaría ver cambiado en vos mismo. Pedile a Dios que te ayude a cambiar esas cosas.",
+"Si tenés dudas acerca de qué defectos de carácter trabajar en este momento, pedile a Dios que te muestre claramente qué asuntos de tu vida mejorarían si les aplicaras los Pasos Seis y Siete.",
+"Hacé una visualización creativa de vos mismo. Visualizate como te gustaría ser. Luego, soltalo. Regresá al ahora. Afirmate que quién sos es bueno. Afirmá tu autoaceptación y el amor por vos mismo en el presente."
+],
+"tareaVerse": {
+"ref": "Santiago 4:10",
+"texto": "\"Humillaos delante del Señor, y él os exaltará.\""
+},
 "dias": [
 {
 "dia": "Lunes",
-"aspecto": "¿Qué es realmente la humildad?",
-"versiculo": "Miqueas 6:8",
-"texto": "\"¿Qué pide el Señor de ti? Solamente hacer justicia, amar misericordia y humillarte ante tu Dios.\"",
-"reflexion": "¿Cómo definís vos la humildad?"
+"aspecto": "Basar el valor propio en la opinión de los demás",
+"ensenanza": "El Séptimo Paso nos pide humildemente pedirle a Dios que nos libere de nuestros defectos — no que se los pidamos a otros, ni que dependamos de la aprobación ajena para sentirnos bien con nosotros mismos. Y sin embargo, una de las características más profundas de la codependencia es exactamente eso: basar el valor propio en la opinión de los demás, dejando que cada mirada, cada comentario, cada silencio ajeno determine cómo nos sentimos con nosotros mismos.\n\nBeattie describe el miedo que sintió al enfrentar este Paso: temía que si Dios le quitaba sus defectos no quedaría nada de ella. \"Sentí tener mucho que perder porque no pensaba que yo fuera gran cosa. Me sentía como una cáscara vacía.\" Esa sensación de \"cáscara vacía\" es exactamente lo que produce basar el valor propio en algo externo: cuando no hay una fuente estable interna de valor, cualquier amenaza a la aprobación ajena se siente como una amenaza a la existencia misma.\n\nEl Séptimo Paso ofrece algo radicalmente distinto: pedirle a Dios —no a las personas— que nos muestre y confirme quiénes somos. Humildad, en este contexto, no es rebajarse. Es reconocer que la fuente correcta de nuestro valor nunca fue la opinión ajena.",
+"historia": "Beattie relata su propio proceso de descubrimiento: \"¿Bajaría Dios y de un golpe quitaría todo lo que se parecía a mí? ¿Me convertiría en una santa? ¿En una concha vacía?\" Detrás de estas preguntas había una creencia arraigada: que su identidad dependía de mantener ciertos comportamientos —muchos de ellos orientados a conseguir aprobación— y que sin ellos no sabría quién era.\n\nLo que descubrió después fue liberador: \"Cuando trabajamos específicamente este Paso, Dios no baja con una aspiradora para chuparse todo lo que tenemos adentro. Dios no me quita mi personalidad. Dios sólo se lleva aquellos rasgos que me restringen y evitan que sea yo misma.\"\n\nCon el tiempo, notó algo crucial: \"He aprendido que soltar mis defectos no elimina mi personalidad. La permite salir y brillar por primera vez desde que fui una niña muy pequeña.\" Basar el valor propio en la opinión de los demás había sido, en realidad, lo que le impedía brillar con su verdadera identidad —no al revés.",
+"pasajePrincipal": {
+"ref": "Gálatas 1:10",
+"texto": "\"Pues, ¿busco ahora el favor de los hombres, o el de Dios? ¿O trato de agradar a hombres? Pues si aún agradara a los hombres, no sería siervo de Cristo.\""
+},
+"contextoBiblico": "Pablo escribe a las iglesias de Galacia defendiendo la autenticidad de su llamado apostólico frente a quienes cuestionaban su autoridad. Su declaración es radical para su contexto: renuncia explícitamente a buscar la aprobación humana como fuente de validación. No porque la aprobación humana sea mala en sí, sino porque cuando se convierte en la medida final del propio valor, compite directamente con la fidelidad a Dios.",
+"pasajeApoyo": {
+"ref": "Juan 12:43",
+"texto": "\"Porque amaban más la gloria de los hombres que la gloria de Dios.\""
+},
+"conexion": "Pablo plantea la pregunta que va al centro de esta característica: ¿busco el favor de los hombres o el de Dios? Basar el valor propio en la opinión de los demás es, en el fondo, amar \"la gloria de los hombres\" —como describe Juan— más que la gloria de Dios. El Séptimo Paso nos invita a redirigir esa búsqueda: en vez de pedirle constantemente aprobación a las personas, pedirle humildemente a Dios que confirme y sane nuestra identidad desde adentro.",
+"preguntas": [
+"Pablo pregunta si busca el favor de los hombres o el de Dios. Basar el valor propio en la opinión de los demás es una de las características más agotadoras de la codependencia. ¿De quién específicamente buscás aprobación constante, y qué pasa con tu estado de ánimo cuando no la recibís?",
+"Beattie temía convertirse en una \"cáscara vacía\" sin sus defectos, porque su identidad dependía en parte de comportamientos orientados a la aprobación. ¿Qué comportamientos tuyos están más orientados a conseguir la aprobación de otros que a ser genuinamente vos mismo?",
+"Juan 12:43 dice que algunos amaban más la gloria de los hombres que la de Dios. Si dejaras de necesitar la aprobación de una persona específica en tu vida, ¿qué cambiaría en cómo actuás con ella?"
+],
+"practica": "Identificá una decisión reciente que tomaste principalmente para obtener la aprobación de alguien. Escribí: \"Humildemente le pido a Dios, no a [nombre], que confirme mi valor hoy.\" Repetilo cuando sientas la necesidad de buscar esa aprobación."
 },
 {
 "dia": "Martes",
-"aspecto": "Humildad sin autodesprecio",
-"versiculo": "Salmo 131:1-2",
-"texto": "\"He acallado y quietado mi alma como un niño destetado.\"",
-"reflexion": "¿Cómo sería estar en paz sin tener que demostrar nada?"
+"aspecto": "Sentirse indigno de amor o de cosas buenas",
+"ensenanza": "Una de las creencias más profundas y dolorosas de la codependencia es sentirse indigno de amor o de cosas buenas — no como un pensamiento ocasional, sino como una convicción de fondo que colorea cada relación, cada oportunidad, cada momento de posible alegría.\n\nBeattie describe el miedo que esta creencia genera ante el Séptimo Paso: si Dios le quitaba sus defectos, ¿qué quedaría? La pregunta revela algo importante: muchos codependientes sienten que sus defectos y su sufrimiento son, en algún nivel retorcido, lo que los hace merecedores de existir — como si el dolor fuera una especie de moneda de cambio para justificar el derecho a estar vivos.\n\nPero el Séptimo Paso pide algo distinto: humildemente pedirle a Dios que nos libere, confiando en que del otro lado de esa liberación no hay vacío sino plenitud. Beattie lo confirma con su propia experiencia: \"Nada, nada, puede interferir con el bien que te toca en la vida.\" Sentirnos indignos de amor o de cosas buenas no es una verdad sobre nosotros — es una barrera que este Paso nos invita a soltar.",
+"historia": null,
+"pasajePrincipal": {
+"ref": "Sofonías 3:17",
+"texto": "\"El Señor está en medio de ti, poderoso, él salvará; se gozará sobre ti con alegría, callará de amor, se regocijará sobre ti con cánticos.\""
+},
+"contextoBiblico": "Sofonías profetiza en un contexto de juicio inminente sobre Jerusalén, y sin embargo este versículo llega como una promesa sorprendente de restauración. La imagen de Dios cantando de alegría sobre su pueblo, \"callando de amor\", es una de las descripciones más tiernas de todo el Antiguo Testamento. No describe a un Dios que tolera a su pueblo a pesar de sus fallas, sino a un Dios que se deleita activamente en ellos.",
+"pasajeApoyo": {
+"ref": "Efesios 2:10",
+"texto": "\"Porque somos hechura suya, creados en Cristo Jesús para buenas obras, las cuales Dios preparó de antemano para que anduviésemos en ellas.\""
+},
+"conexion": "Sofonías describe a un Dios que se regocija con cánticos sobre su pueblo —no porque lo merezcan por su comportamiento perfecto, sino porque son suyos. Efesios 2:10 añade que fuimos creados intencionalmente, con un propósito preparado de antemano. Sentirse indigno de amor o de cosas buenas contradice directamente ambos textos: no somos un error tolerado, sino una \"hechura\" deliberada por la que Dios se regocija. El Séptimo Paso nos pide soltar la creencia de indignidad para poder recibir lo que, según estos textos, siempre nos perteneció.",
+"preguntas": [
+"Sofonías 3:17 describe a Dios regocijándose con cánticos sobre su pueblo. Sentirse indigno de amor o de cosas buenas es una de las creencias más profundas de la codependencia. ¿Podés imaginar a Dios sintiendo ese gozo específicamente por vos, tal como sos hoy?",
+"Beattie sugiere que a veces nos aferramos al sufrimiento porque, de alguna manera retorcida, nos sentimos más merecedores de existir cuando sufrimos. ¿Reconocés esa dinámica en vos? ¿Te cuesta permitirte cosas buenas sin sentir que primero tenés que \"ganarlas\" con sufrimiento?",
+"Efesios 2:10 dice que fuiste creado con un propósito preparado de antemano. ¿Qué cosa buena en tu vida —una oportunidad, una relación, un descanso— has estado rechazando o minimizando porque una parte de vos cree que no la merecés?"
+],
+"practica": "Permitite hoy una sola cosa buena, pequeña, sin justificarla ni \"ganártela\" primero con esfuerzo o sufrimiento. Puede ser tan simple como un descanso, algo rico de comer, o un momento de silencio. Notá la resistencia que aparece, y dejala pasar."
 },
 {
 "dia": "Miércoles",
-"aspecto": "Dios da gracia al humilde",
-"versiculo": "Santiago 4:6",
-"texto": "\"Dios resiste a los soberbios, y da gracia a los humildes.\"",
-"reflexion": "¿En qué relaciones tendés a actuar desde la soberbia?"
+"aspecto": "Dificultad para recibir ayuda, cumplidos o amor",
+"ensenanza": "El Séptimo Paso es, en su esencia, un acto de recibir: humildemente pedimos, y luego confiamos en que hemos sido escuchados. Pero muchos codependientes tienen una dificultad profunda precisamente para recibir — ayuda, cumplidos, amor, cualquier cosa buena que venga de afuera hacia adentro. Damos con facilidad; recibir nos resulta extraño, incómodo, incluso sospechoso.\n\nBeattie lo describe indirectamente al hablar de su propio proceso: no comprendía bien el proceso que había iniciado al pedir. \"¿Me fulminaría un rayo? ¿Me dormiría esa noche para despertar siendo una persona diferente al día siguiente?\" Detrás de estas preguntas hay una desconfianza básica hacia el acto de recibir algo sin haberlo ganado con esfuerzo propio.\n\nEl Paso nos enseña algo distinto: \"Este Paso nos da permiso de llegar cual somos y traer nuestras necesidades y deseos a nuestro Poder Superior. Pedimos por favor, y luego confiamos en que hemos sido escuchados.\" Aprender a recibir —una respuesta a la oración, un cumplido, ayuda genuina— es tan parte de la recuperación como aprender a soltar el control.",
+"historia": "Beattie describe su primer Séptimo Paso formal: se recluyó en un cuarto, cerró la puerta, y le pidió a su Creador que le quitara todos sus defectos de carácter. \"A pesar de mis temores, lo dije sinceramente.\" Pero después de orar, no supo qué hacer con la espera: \"Medité un rato, y luego me alisté a salir del cuarto, preguntándome qué sucedería.\"\n\nEsa incomodidad ante la espera revela la dificultad de recibir: había hecho la parte de pedir, pero no sabía cómo simplemente confiar y dejar que la respuesta llegara sin forzarla. Con el tiempo, aprendió: \"No tuve que cambiarme a mí misma. No fui revolucionada instantáneamente cuando di este Paso. Pero darlo, inició el proceso.\"\n\nAprender a recibir, para Beattie, significó soltar la necesidad de controlar cómo y cuándo llegaría el cambio, y simplemente permitir que se le diera —un ejercicio de recepción tan desconocido para ella como lo es para muchos codependientes.",
+"pasajePrincipal": {
+"ref": "Mateo 7:7-8",
+"texto": "\"Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá. Porque todo aquel que pide, recibe.\""
+},
+"contextoBiblico": "Jesús enseña esto en el Sermón del Monte, usando tres verbos progresivos —pedir, buscar, llamar— que describen distintos niveles de iniciativa, todos terminando en la misma promesa de respuesta. Es significativo que la instrucción no termine en \"pedid\", sino que Jesús explícitamente declare: \"todo aquel que pide, recibe.\" La recepción no es opcional ni incierta — es la consecuencia natural y prometida de pedir.",
+"pasajeApoyo": {
+"ref": "Santiago 1:17",
+"texto": "\"Toda buena dádiva y todo don perfecto desciende de lo alto, del Padre de las luces.\""
+},
+"conexion": "Jesús promete que todo el que pide, recibe — pero muchos codependientes solo dominamos la primera mitad de ese circuito: pedimos (o ni siquiera eso, porque nos cuesta pedir), pero no sabemos recibir cuando la respuesta llega. Santiago 1:17 describe a Dios como la fuente de \"toda buena dádiva\" — un dador generoso por naturaleza. La dificultad para recibir ayuda, cumplidos o amor no honra esa generosidad divina; la rechaza, aunque sea sin querer. El Séptimo Paso nos entrena en el arte de recibir, tanto de Dios como de las personas que Él pone en nuestro camino.",
+"preguntas": [
+"Jesús promete que todo el que pide, recibe. Dificultad para recibir ayuda, cumplidos o amor es una de las características más silenciosas de la codependencia, porque no se ve como un problema —se ve como modestia o independencia. ¿Cómo reaccionás cuando alguien te hace un cumplido genuino? ¿Lo recibís o lo minimizás automáticamente?",
+"Beattie tuvo dificultad para simplemente esperar y confiar después de pedir, sin necesitar controlar cómo llegaría la respuesta. ¿Te cuesta recibir ayuda sin sentir que tenés que devolver algo de inmediato, o sin sentirte en deuda?",
+"Santiago 1:17 describe a Dios como dador generoso de toda buena dádiva. ¿Qué buena dádiva de Dios —una oportunidad, una respuesta a una oración, el cuidado de alguien— has estado rechazando o cuestionando en vez de simplemente recibir?"
+],
+"practica": "La próxima vez que alguien te ofrezca ayuda, haga un cumplido, o exprese cariño hoy, practicá recibirlo con un simple \"gracias\", sin minimizarlo ni devolverlo inmediatamente con otro cumplido. Observá cómo se siente."
 },
 {
 "dia": "Jueves",
-"aspecto": "Pedir sin vergüenza",
-"versiculo": "Mateo 7:7-8",
-"texto": "\"Pedid, y se os dará; buscad, y hallaréis.\"",
-"reflexion": "¿Qué te cuesta pedirle a Dios?"
+"aspecto": "La necesidad de aprobación constante",
+"ensenanza": "Muy relacionado con basar el valor propio en la opinión de los demás está algo más activo y agotador: la necesidad de aprobación constante — no un deseo ocasional de ser bien visto, sino una búsqueda incesante que nunca se sacia del todo, porque la última aprobación recibida nunca alcanza para calmar la necesidad de la siguiente.\n\nBeattie describe cómo este patrón, cuando lo vio con claridad, la hizo sentir que tenía \"mucho que perder\" si Dios se lo quitaba — como si la aprobación constante fuera parte esencial de su funcionamiento, no un peso del que liberarse. Esa confusión es común: confundimos la necesidad compulsiva de aprobación con motivación sana, cuando en realidad son cosas muy distintas.\n\nEl Séptimo Paso ofrece una salida específica: en vez de buscar aprobación de personas —una fuente que nunca provee suficiente ni de manera constante—, pedirle humildemente a Dios que sane la necesidad misma. No se trata de conseguir la aprobación perfecta y definitiva de todas las personas relevantes en nuestra vida. Se trata de que la necesidad compulsiva de buscarla deje de gobernarnos.",
+"historia": "Sandy, cuyo testimonio abre el capítulo del Sexto Paso, mostró claramente esta necesidad: después de una noche difícil, se preguntaba angustiada cómo cambiar su forma de ser, buscando validación incluso en la manera correcta de trabajar los Pasos. Cuando le preguntaron por qué no probaba trabajar el Sexto y Séptimo Paso, su respuesta reveló la trampa: \"He estado trabajando esos Pasos. Y parece empeorar. ¡Entre más los trabajo, más me fijo en lo que estoy haciendo!\"\n\nLa respuesta que recibió fue clave: \"Entonces puedes relajarte y confiar en el proceso porque está funcionando.\" Notar con más claridad la propia necesidad de aprobación —incluso sentir que \"empeora\"— es en realidad una señal de progreso, no de fracaso. La necesidad de aprobación constante empieza a perder su poder precisamente cuando dejamos de intentar controlarla y simplemente la entregamos.",
+"pasajePrincipal": {
+"ref": "Proverbios 29:25",
+"texto": "\"El temor del hombre pondrá lazo; mas el que confía en el Señor será exaltado.\""
+},
+"contextoBiblico": "Este proverbio contrasta dos fuentes posibles de seguridad: el temor al juicio humano (que incluye la necesidad de su aprobación) y la confianza en Dios. La palabra \"lazo\" (hebreo: moqesh) describe una trampa para cazar animales — una imagen precisa de cómo la necesidad de aprobación humana nos atrapa, limitando nuestras decisiones y nuestra libertad de ser auténticos.",
+"pasajeApoyo": {
+"ref": "1 Tesalonicenses 2:4",
+"texto": "\"Sino según hemos sido aprobados por Dios para que se nos confiase el evangelio, así hablamos; no como para agradar a los hombres, sino a Dios.\""
+},
+"conexion": "El proverbio describe la necesidad de aprobación humana como un \"lazo\" — una trampa que limita nuestros movimientos. Pablo, en 1 Tesalonicenses, modela la alternativa: hablar y actuar según la aprobación que ya tenemos de Dios, no según lo que agrade a los hombres. El Séptimo Paso nos invita exactamente a esto: soltar la búsqueda incesante de aprobación humana, y descansar en la aprobación —ya dada, ya completa— que viene de Dios.",
+"preguntas": [
+"Proverbios 29:25 describe el temor al hombre como un lazo o trampa. La necesidad de aprobación constante es una de las características que más nos atrapa en la codependencia, porque nunca se sacia del todo. ¿En qué situación de tu vida sentís esa trampa más claramente — buscando aprobación que nunca termina de ser suficiente?",
+"Sandy notó que trabajar los Pasos Seis y Siete la hacía \"fijarse más\" en su propia necesidad de aprobación, y eso al principio se sintió como empeoramiento. ¿Has notado algo similar en vos: que a medida que avanzás en la recuperación, ves con más claridad (aunque incómoda) tus propios patrones?",
+"Pablo dice que habla para agradar a Dios, no a los hombres. Si dejaras de necesitar la aprobación constante de una persona específica, ¿qué decisión tomarías diferente esta semana?"
+],
+"practica": "Identificá una decisión pequeña de hoy donde normalmente buscarías aprobación antes de actuar. Tomala sin pedir esa aprobación, confiando en la aprobación que ya tenés de Dios. Escribí cómo se sintió."
 },
 {
 "dia": "Viernes",
-"aspecto": "La fuerza en reconocer los límites",
-"versiculo": "2 Corintios 12:9-10",
-"texto": "\"Mi poder se perfecciona en la debilidad… cuando soy débil, entonces soy fuerte.\"",
-"reflexion": "¿Qué debilidad tuya has intentado esconder?"
+"aspecto": "Comparación constante con otros",
+"ensenanza": "Otra forma en que buscamos afuera lo que solo Dios puede confirmar adentro es la comparación constante con otros — medir nuestro propio valor, progreso o suficiencia en relación con lo que vemos en los demás, en vez de medirlo según lo que Dios dice sobre nosotros directamente.\n\nBeattie habla de este proceso de manera hermosa cuando describe cómo algunos de nuestros rasgos más problemáticos pueden transformarse: \"Existe un aspecto negativo del rasgo de la obsesividad, y con frecuencia existe un lado positivo del mismo rasgo. La obsesividad invertida se convierte en determinación.\" Este principio se aplica también a la comparación: compararnos constantemente con otros puede invertirse en la capacidad de aprender de otros sin perder nuestro propio centro.\n\nLa clave, según Beattie, es la aceptación de nosotros mismos como somos, con nuestro propio ritmo: \"Quizá nunca sea yo una buena cocinera, y no estoy segura de que me importe. Acepto eso de mí misma... Algunas cosas las hago bien. Algunas mediocremente. Algunas no las hago. Eso está bien.\" El Séptimo Paso nos invita a soltar la vara de medir que usamos contra los demás y aceptar la nuestra propia, la que Dios nos dio.",
+"historia": null,
+"pasajePrincipal": {
+"ref": "Gálatas 6:4",
+"texto": "\"Cada uno someta a prueba su propia obra, y entonces tendrá motivo de gloriarse sólo respecto de sí mismo, y no en comparación con otro.\""
+},
+"contextoBiblico": "Pablo escribe esto en el contexto de una comunidad donde algunos se comparaban espiritualmente con otros, generando tanto orgullo como desánimo según el resultado de la comparación. Su instrucción es clara: cada quien examina su propia obra —no la ajena— y encuentra en eso, y solo en eso, motivo legítimo de satisfacción. La comparación queda explícitamente descartada como medida válida.",
+"pasajeApoyo": {
+"ref": "Salmo 139:14",
+"texto": "\"Te alabaré; porque asombrosa y maravillosamente he sido hecho; maravillosas son tus obras, y mi alma lo sabe muy bien.\""
+},
+"conexion": "Gálatas 6:4 elimina la comparación como vara de medida legítima; el Salmo 139 ofrece la vara correcta: cada persona fue hecha de manera asombrosa y maravillosa, con su propio diseño único. Beattie lo confirma con su ejemplo de la cocina: aceptar lo que uno es y no es, sin medirlo contra el desempeño ajeno. El Séptimo Paso nos pide humildemente que Dios nos libere de la comparación constante, para poder ver con claridad nuestro propio diseño, tal como es.",
+"preguntas": [
+"Gálatas 6:4 dice que cada uno debe examinar su propia obra, no compararla con la de otro. Comparación constante con otros es una característica silenciosa pero agotadora de la codependencia. ¿Con quién te comparás más frecuentemente, y qué sentís cuando lo hacés?",
+"Beattie aceptó no ser una buena cocinera sin que eso afectara su valor propio. ¿Hay un área de tu vida donde te comparás negativamente con otros, y que podrías simplemente aceptar como Beattie aceptó su relación con la cocina?",
+"El Salmo 139:14 dice que fuiste hecho de manera asombrosa y maravillosa. ¿Qué cualidad tuya, única y distinta de la de cualquier otra persona, podrías empezar a valorar hoy sin compararla con la de nadie más?"
+],
+"practica": "Notá una comparación que hagas hoy (con un amigo, un familiar, alguien en redes sociales). En vez de seguir esa comparación, decí en voz alta: \"Fui hecho de manera asombrosa y maravillosa, con mi propio diseño.\" Repetilo cada vez que la comparación regrese."
 },
 {
 "dia": "Sábado",
-"aspecto": "Dependencia de Dios, no de uno mismo",
-"versiculo": "Filipenses 4:13",
-"texto": "\"Todo lo puedo en Cristo que me fortalece.\"",
-"reflexion": "¿Qué necesitás hoy que solo Él puede darte?"
+"aspecto": "Humildemente pedimos — el corazón de la transformación",
+"ensenanza": "Los Pasos Seis y Siete son de transformación. Después de ver esta semana cómo basamos nuestro valor en la opinión ajena, cómo nos sentimos indignos de amor, cómo nos cuesta recibir, cómo necesitamos aprobación constante, y cómo nos comparamos con otros, llegamos al corazón del Séptimo Paso: humildemente pedimos.\n\nBeattie explica que este Paso no significa gritarle a Dios que nos cambie, ni exigir, ni mendigar incesantemente. \"Lo que quiere decir este Paso es que reconocemos que Dios es el poder. Reconocemos la diferencia entre Dios y nosotros: Dios es omnipotente; nosotros no y no tenemos que serlo.\" Cada una de las cinco características de esta semana es, en el fondo, un intento de proveernos a nosotros mismos algo que solo Dios puede dar realmente: valor, dignidad, la capacidad de recibir, aprobación estable, y una medida de comparación que no sea comparación en absoluto.\n\nCuando las personas le preguntan a Beattie cómo cambiar, su respuesta no es complicada: \"Dispónganse. Sean receptivos. Pidan por favor. Y aprecien quienes son en este momento.\" Ese es el resumen completo del Séptimo Paso: no forzar el cambio, sino pedirlo humildemente y confiar en que será dado.",
+"historia": null,
+"pasajePrincipal": {
+"ref": "Santiago 4:10",
+"texto": "\"Humillaos delante del Señor, y él os exaltará.\""
+},
+"contextoBiblico": "Santiago escribe a comunidades cristianas divididas por conflictos y orgullo. El versículo forma parte de una serie de instrucciones sobre someterse a Dios y resistir al diablo. Lo notable es la promesa que acompaña la humillación: no es una humillación que termina en degradación, sino una que Dios mismo revierte en exaltación. El orden importa: primero la humildad genuina, luego la elevación que solo Dios puede dar.",
+"pasajeApoyo": {
+"ref": "1 Pedro 5:6-7",
+"texto": "\"Humillaos, pues, bajo la poderosa mano de Dios, para que él os exalte cuando fuere tiempo; echando toda vuestra ansiedad sobre él, porque él tiene cuidado de vosotros.\""
+},
+"conexion": "Santiago y Pedro coinciden: la humildad ante Dios no es autodestrucción, es el camino hacia la exaltación que Dios mismo provee, en su tiempo. Las cinco características de esta semana —buscar aprobación externa, sentirse indigno, no poder recibir, necesitar aprobación constante, compararse con otros— son todas, en el fondo, intentos de exaltarnos a nosotros mismos por nuestros propios medios, o de convencernos de que no merecemos ser exaltados en absoluto. El Séptimo Paso nos devuelve al orden correcto: humillarnos genuinamente delante de Dios, y confiar en que Él —no nuestro esfuerzo ni la aprobación ajena— hará el resto.",
+"preguntas": [
+"De las cinco características de esta semana —basar el valor en la opinión ajena, sentirse indigno, dificultad para recibir, necesidad de aprobación constante, comparación con otros— ¿cuál reconocés con más claridad en vos mismo?",
+"Santiago 4:10 promete que Dios exalta a quien se humilla genuinamente delante de Él. ¿Qué significaría para vos pedirle a Dios, en vez de a las personas, que confirme tu valor esta semana?",
+"Beattie resume el proceso en cuatro pasos simples: dispónganse, sean receptivos, pidan por favor, aprecien quienes son. ¿Cuál de estos cuatro te resulta más difícil hoy?"
+],
+"practica": "Escribí una oración corta usando las palabras de Beattie: \"Dios, me dispongo. Soy receptivo. Te pido, por favor, que me liberes de [nombrá la característica de esta semana que más te representa]. Hoy elijo apreciar quién soy, en este momento.\""
 }
 ]
 },
@@ -1045,52 +1156,153 @@ body{background:#0f1117;color:#e8e0d0;font-family:'Georgia',serif}
 "numero": 8,
 "paso": "Paso 8",
 "titulo": "Lista de Personas Afectadas",
-"descripcion": "Hicimos una lista de todas las personas a quienes habíamos perjudicado y estuvimos dispuestos a reparar el daño.",
-"tema": "Asumir responsabilidad por el impacto en otros",
+"descripcion": "Hicimos una lista de todas aquellas personas a quienes habíamos ofendido y estuvimos dispuestos a reparar el daño que les causamos.",
+"tema": "Cinco formas en que nuestro amor lastimó, sin que fuera esa la intención",
 "color": "#7A4E2D",
-"completo": false,
+"completo": true,
+"tarea": [
+"Hacé la primera lista: personas que sentís que te han dañado, perjudicado o victimizado. No es lo que técnicamente pide el Paso, pero puede liberar espacio para el trabajo real.",
+"Hacé la segunda lista, la central de este Paso: personas a quienes vos has dañado con tus comportamientos codependientes. Sé específico: \"Fulano fue víctima de mi rabia\", \"Enloquecí a Fulana tratando de controlarla.\"",
+"Hacé la tercera lista, quizás la más importante: escribí tu propio nombre. ¿De qué maneras te has dañado a vos mismo con la codependencia — reprimiendo sentimientos, descuidándote, criticándote, permitiendo que abusen de vos?",
+"Si te encontrás enredado en culpa inmerecida, hacé una lista de personas con quienes te sentís culpable sin haberles hecho daño real. Revisá si detrás de esa culpa hay, en realidad, un enojo oculto.",
+"Repasá tu lista de daños causados y preguntate, para cada nombre: ¿hacia quién no siento paz en mi corazón? Esa pregunta, más que la culpa, es la brújula real de este Paso."
+],
+"tareaVerse": {
+"ref": "Mateo 5:23-24",
+"texto": "\"Por tanto, si traes tu ofrenda al altar, y allí te acuerdas de que tu hermano tiene algo contra ti, deja allí tu ofrenda delante del altar, y anda, reconcíliate primero con tu hermano.\""
+},
 "dias": [
 {
 "dia": "Lunes",
-"aspecto": "Ver el impacto en los demás",
-"versiculo": "Mateo 5:23-24",
-"texto": "\"Reconcíliate primero con tu hermano, y entonces ven y presenta tu ofrenda.\"",
-"reflexion": "¿Hay alguien que lleva una herida que vos le causaste?"
+"aspecto": "Manipular a otros para lograr un resultado deseado",
+"ensenanza": "\"Cuando leí por primera vez el Octavo Paso, lo leí mal\", dijo Jason. \"Pensé que decía: 'Hacer una lista de todas las personas que te han dañado'.\" Ese malentendido es común y revelador: nos resulta más natural pensar en cómo nos dañaron a nosotros que en cómo dañamos nosotros a otros — especialmente a través de la manipulación.\n\nManipular a otros para lograr un resultado deseado es una de las características más difíciles de reconocer en uno mismo, porque casi nunca se siente como manipulación en el momento — se siente como supervivencia, como la única manera de conseguir lo que necesitábamos o de evitar lo que temíamos. Pero Beattie es clara: cuando llegó a este lugar en su propia codependencia, \"mi comportamiento inadecuado hacia otros era claro. No había posibilidad de justificarlos, racionalizarlos, o explicarlos. Había obrado mal.\"\n\nEl Octavo Paso nos pide dejar de mirar el comportamiento del otro y examinar el nuestro con honestidad: ¿a quién manipulamos? ¿Mentimos, aunque fuera \"por una buena causa\"? Este examen no busca hacernos sentir culpables sin fin — busca liberarnos, nombrando con precisión lo que hicimos para poder repararlo.",
+"historia": "Beattie describe el proceso de hacer su lista de personas dañadas: \"Ayuda ser específico en relación al daño que hemos causado.\" Y ofrece ejemplos concretos de manipulación reconocida con honestidad: \"Enloquecí a Susan tratando de controlarla.\" \"Le pedí prestado a Angela y no le he pagado.\"\n\nLo notable de estos ejemplos es su precisión: no son confesiones vagas de \"ser codependiente\" en general, sino actos concretos con nombres concretos. Beattie insiste en esto: \"¿A quién, exactamente, hemos dañado con nuestros comportamientos codependientes?\" La manipulación, cuando se nombra con esta especificidad, deja de ser una nube difusa de culpa y se convierte en algo que realmente se puede reparar.\n\nEste ejercicio de nombrar con exactitud —quién, qué, cuándo— es lo que distingue el Octavo Paso de simplemente sentirse mal por ser codependiente en general.",
+"pasajePrincipal": {
+"ref": "Proverbios 26:24-26",
+"texto": "\"El que odia disimula con sus labios; mas en su interior maquina engaño. Cuando hablare amigablemente, no le creas; porque siete abominaciones hay en su corazón.\""
+},
+"contextoBiblico": "Este proverbio describe a alguien que oculta sus verdaderas intenciones detrás de palabras amables — la manipulación en su forma más clásica. Es importante notar que Proverbios no condena la emoción oculta en sí (el enojo, el miedo), sino el uso engañoso de las palabras para conseguir un resultado mientras se esconde la intención real detrás de una fachada agradable.",
+"pasajeApoyo": {
+"ref": "Efesios 4:25",
+"texto": "\"Por lo cual, desechando la mentira, hablad verdad cada uno con su prójimo.\""
+},
+"conexion": "Proverbios describe exactamente el mecanismo de la manipulación: palabras amigables que esconden una intención distinta. Efesios 4:25 ofrece la alternativa directa: desechar la mentira y hablar la verdad. El Octavo Paso nos pide identificar con nombre y apellido a quién manipulamos —quién recibió de nosotros palabras amigables que en realidad escondían un intento de controlar un resultado— para poder, eventualmente, reparar ese daño con la verdad.",
+"preguntas": [
+"Proverbios 26:24 describe a alguien que disimula con sus labios mientras maquina algo distinto por dentro. Manipular a otros para lograr un resultado deseado es una de las características más difíciles de reconocer en uno mismo. ¿A quién manipulaste recientemente, aunque en el momento se sintiera justificado o necesario?",
+"Beattie pide especificidad: \"Enloquecí a Susan tratando de controlarla.\" ¿Podés nombrar con esa misma precisión a alguien a quien manipulaste, y describir exactamente qué resultado buscabas conseguir?",
+"Efesios 4:25 pide desechar la mentira y hablar verdad. ¿Hay una conversación pendiente donde necesitás reemplazar la manipulación por la verdad directa, aunque sea más incómoda?"
+],
+"practica": "Escribí en tu lista del Octavo Paso el nombre de una persona a quien manipulaste, con la mayor especificidad posible: qué hiciste, y qué resultado buscabas. No te disculpes todavía — solo nombralo con precisión."
 },
 {
 "dia": "Martes",
-"aspecto": "Honestidad sobre el daño causado",
-"versiculo": "Lucas 15:17-18",
-"texto": "\"Me levantaré e iré a mi padre y le diré: Pequé.\"",
-"reflexion": "¿Podés hacer un recuento honesto sin excusas ni justificaciones?"
+"aspecto": "Confundir amor con lástima o necesidad de rescatar",
+"ensenanza": "Una de las formas más dolorosas en que dañamos a otros sin darnos cuenta es confundir amor con lástima o necesidad de rescatar. Cuando \"amamos\" a alguien principalmente porque sentimos lástima por su situación, o porque necesitamos rescatarlo para sentirnos útiles, no estamos amando a esa persona en su plenitud — estamos relacionándonos con su necesidad, no con su ser completo.\n\nBeattie advierte sobre este patrón cuando describe a quiénes solemos incluir en nuestra lista de personas dañadas: \"¿Existen personas a quienes hemos rescatado una y otra vez por nuestra codependencia, para luego quedarnos resentidas con ellas porque estamos cansados de asumir la responsabilidad por su comportamiento?\" Ese resentimiento posterior es la evidencia de que el \"amor\" original no era realmente amor puro — era necesidad de rescatar, disfrazada de generosidad.\n\nEl daño que esto causa es real, aunque sutil: rescatar a alguien repetidamente puede impedirle enfrentar sus propias consecuencias y crecer a través de ellas. Confundir amor con lástima, sin saberlo, puede mantener a otra persona atrapada en su propio patrón disfuncional, mientras nosotros sentimos que estamos siendo buenos.",
+"historia": null,
+"pasajePrincipal": {
+"ref": "1 Corintios 13:4-5",
+"texto": "\"El amor es sufrido, es benigno... no busca lo suyo, no se irrita, no guarda rencor.\""
+},
+"contextoBiblico": "Pablo describe las cualidades del amor genuino en un contexto de conflicto comunitario en Corinto. Es notable que \"no busca lo suyo\" aparezca en la lista: el amor genuino no está orientado a satisfacer una necesidad propia (como sentirse útil o necesario) a través del otro. Cuando el amor busca lo suyo —aunque sea de manera sutil, como necesitar rescatar para sentirse valioso— deja de ser el amor que describe Pablo.",
+"pasajeApoyo": {
+"ref": "Gálatas 6:5",
+"texto": "\"Porque cada uno llevará su propia carga.\""
+},
+"conexion": "1 Corintios 13 describe un amor que no busca lo suyo — que no necesita rescatar al otro para sentirse valioso. Gálatas 6:5 confirma el límite: cada uno lleva su propia carga, lo cual significa que rescatar constantemente a alguien de su carga legítima no es amor genuino, sino una interferencia con su proceso de crecimiento. El Octavo Paso nos pide reconocer a quiénes hemos \"amado\" de esta manera confundida, y el daño real que eso pudo haber causado, aunque nuestra intención pareciera buena.",
+"preguntas": [
+"1 Corintios 13 dice que el amor no busca lo suyo. Confundir amor con lástima o necesidad de rescatar es una de las características que más disfraza el daño real que causamos, porque se siente como generosidad. ¿Hay alguien a quien has \"rescatado\" repetidamente, y con quien después sentiste resentimiento por hacerlo?",
+"Gálatas 6:5 dice que cada uno lleva su propia carga. ¿En qué relación específica tu necesidad de rescatar pudo haber impedido que la otra persona enfrentara su propia carga y creciera a través de ella?",
+"¿Podés distinguir, en una relación actual, entre amar genuinamente a alguien y sentir lástima por su situación? ¿Qué cambiaría en esa relación si dejaras de intentar rescatarlo?"
+],
+"practica": "Pensá en una persona que has rescatado repetidamente. Escribí en tu lista del Octavo Paso: \"Confundí amor con necesidad de rescatar a [nombre], lo cual pudo haberle impedido crecer a través de su propia carga.\""
 },
 {
 "dia": "Miércoles",
-"aspecto": "Sin justificar las heridas causadas",
-"versiculo": "Proverbios 20:9",
-"texto": "\"¿Quién podrá decir: Yo he limpiado mi corazón, limpio estoy de mi pecado?\"",
-"reflexion": "Practicá decir 'hice daño' sin el 'pero...'"
+"aspecto": "Fusionarse emocionalmente con los problemas de otra persona",
+"ensenanza": "Otra forma de daño sutil, tanto hacia nosotros mismos como hacia otros, es fusionarse emocionalmente con los problemas de otra persona — perder la distinción entre lo que le pasa al otro y lo que nos pasa a nosotros, hasta que su crisis se convierte, sin invitación, en nuestra crisis también.\n\nBeattie describe cómo esta fusión emocional produce culpa confusa cuando hacemos nuestro inventario: \"me preguntaba si hacer reparaciones a las personas que me habían victimizado no me colocaría en mayor desventaja, dejándome más a su merced y totalmente indefensa.\" Esta pregunta revela lo entrelazadas que estaban sus propias emociones con las de otros — hasta el punto de no poder distinguir claramente dónde terminaba el daño ajeno y empezaba su propia responsabilidad.\n\nEl daño de la fusión emocional hacia otros es real: cuando nos fusionamos con el problema de alguien, dejamos de verlo como una persona capaz de manejar su propia vida, y empezamos a tratarlo como una extensión de nuestra propia ansiedad. Esto puede sofocar a la otra persona, invadir sus límites, y comunicarle —sin palabras— que no confiamos en su capacidad de resolver sus propios asuntos.",
+"historia": "Beattie ofrece un ejemplo específico de este patrón en su lista de reparaciones: \"Olvidé ser honesta conmigo misma y me enredé en los resentimientos de Harvey hacia Don; luego, abandoné por completo a Don aunque me seguía agradando.\" Este ejemplo captura perfectamente la fusión emocional: en vez de mantener su propia perspectiva independiente sobre Don, Beattie absorbió el resentimiento de Harvey como si fuera propio, y actuó en consecuencia —dañando una relación que ella valoraba genuinamente.\n\nEste tipo de fusión no siempre es dramática. A veces se ve simplemente como \"tomar partido\" automáticamente en cada conflicto ajeno, o sentir la ansiedad de otra persona como si fuera nuestra propia ansiedad, sin ningún límite que las separe. El Octavo Paso nos invita a nombrar estos momentos con precisión, para poder ver el daño real que causaron —tanto a la otra persona directamente afectada, como a nosotros mismos.",
+"pasajePrincipal": {
+"ref": "Gálatas 6:2-5",
+"texto": "\"Sobrellevad los unos las cargas de los otros... porque cada uno llevará su propia carga.\""
+},
+"contextoBiblico": "Como vimos en semanas anteriores, Pablo usa dos palabras griegas distintas para \"carga\" en este mismo pasaje: baros (peso compartido, ocasional) y phortion (la mochila personal de cada uno). La fusión emocional confunde sistemáticamente estas dos categorías, tratando cada phortion ajeno como si fuera un baros que debemos cargar nosotros también.",
+"pasajeApoyo": {
+"ref": "Proverbios 26:17",
+"texto": "\"El que pasando se deja llevar de la ira en pleito ajeno, es como el que toma al perro por las orejas.\""
+},
+"conexion": "Este proverbio describe con humor gráfico el peligro de involucrarse en un conflicto que no nos pertenece: es como tomar a un perro por las orejas — nos exponemos a ser mordidos por algo que no era nuestra pelea. Beattie vivió exactamente esto con Harvey y Don: se fusionó con un resentimiento ajeno y terminó dañando una relación propia. El Octavo Paso nos pide reconocer estos momentos de fusión emocional y el daño real que causaron, tanto a la persona directamente afectada como a la relación misma.",
+"preguntas": [
+"Proverbios 26:17 compara meterse en un pleito ajeno con tomar a un perro por las orejas. Fusionarse emocionalmente con los problemas de otra persona es una de las características más invasivas de la codependencia porque no respeta los límites del otro. ¿En qué situación reciente absorbiste el problema o el resentimiento de alguien más como si fuera tuyo?",
+"Beattie perdió una relación que valoraba (con Don) por fusionarse con el resentimiento de otra persona (Harvey). ¿Hay alguna relación tuya que se haya dañado porque te fusionaste con el conflicto o la opinión de alguien más?",
+"Gálatas 6 distingue entre cargas compartidas y cargas personales. ¿Podés identificar una situación actual donde estás cargando el phortion (mochila personal) de otra persona como si fuera tuya?"
+],
+"practica": "Identificá una situación donde te fusionaste con el problema de otra persona. Escribí en tu lista: \"Me fusioné con el problema/resentimiento de [nombre], y eso afectó mi relación con [otra persona o conmigo mismo] de esta manera: ...\""
 },
 {
 "dia": "Jueves",
-"aspecto": "La disposición antes de la acción",
-"versiculo": "Ezequiel 33:14-16",
-"texto": "\"Si el impío se volviere de su pecado y practicare el derecho, de su pecado no se le recordará.\"",
-"reflexion": "Hacé hoy tu lista escrita. Escribir los nombres ya es un acto de responsabilidad."
+"aspecto": "Dar demasiado sin límites claros",
+"ensenanza": "Dar demasiado —dinero, tiempo, energía— sin límites claros parece, en la superficie, lo opuesto de un daño: parece generosidad, amor, sacrificio noble. Pero Beattie es enfática en que esto también puede requerir reparación, no porque dar sea malo, sino porque dar sin límites suele producir resentimiento posterior, agotamiento, y una dinámica desequilibrada que termina lastimando a ambas partes.\n\n\"Considera tu historia laboral\", escribe Beattie. \"¿Existe un jefe o empleado a quien no le diste lo que te comprometiste a dar, debido a tu codependencia?\" Es una pregunta reveladora: a veces dar demasiado en un área (a una persona, a una causa) nos deja sin recursos para cumplir compromisos legítimos en otra área, generando un daño indirecto.\n\nEl daño de dar sin límites también incluye lo financiero: \"¿A quién debes dinero como resultado de tu codependencia? Quizá pedimos prestado y no hemos pagado. A lo mejor mentimos o manipulamos, por temor o para sobrevivir, para conseguir dinero que no era legítimamente nuestro.\" El Octavo Paso nos pide examinar honestamente estos patrones de dar sin límites, y su costo real en las relaciones y en nuestra propia estabilidad.",
+"historia": null,
+"pasajePrincipal": {
+"ref": "2 Corintios 9:7",
+"texto": "\"Cada uno dé como propuso en su corazón: no con tristeza, ni por necesidad, porque Dios ama al dador alegre.\""
+},
+"contextoBiblico": "Pablo escribe sobre una ofrenda para la iglesia de Jerusalén, animando a la generosidad pero con una condición clara: que sea \"como propuso en su corazón\", no por presión ni por necesidad compulsiva. \"Dador alegre\" (griego: hilaros, de donde viene \"hilarante\") describe a alguien que da desde la libertad y el gozo, no desde la obligación interna o el miedo de decir que no.",
+"pasajeApoyo": {
+"ref": "Proverbios 22:26-27",
+"texto": "\"No estés entre los que dan fianzas... Porque si no tienes con qué pagar, ¿por qué han de quitar tu cama de debajo de ti?\""
+},
+"conexion": "Pablo pide que el dar surja de una decisión libre del corazón, no de compulsión. Proverbios advierte concretamente sobre las consecuencias de comprometerse financieramente más allá de la propia capacidad. Dar demasiado sin límites claros contradice ambos principios: no es generosidad libre, es un patrón compulsivo que suele terminar dañando tanto al dador como a la relación misma. El Octavo Paso nos pide examinar honestamente dónde hemos dado de esta manera desequilibrada, y a quién eso terminó afectando.",
+"preguntas": [
+"Pablo pide que demos como propusimos en el corazón, no por presión ni compulsión. Dar demasiado (dinero, tiempo, energía) sin límites claros es una característica que se disfraza de virtud. ¿A quién le has dado más de lo que podías sostener, y qué resentimiento o agotamiento produjo eso después?",
+"Beattie pregunta sobre compromisos laborales incumplidos por dar demasiado en otra área. ¿Hay algún compromiso legítimo que hayas descuidado porque diste sin límites en otra parte de tu vida?",
+"Proverbios advierte sobre comprometerse financieramente más allá de la propia capacidad. ¿Le debés dinero a alguien, o alguien te lo debe a vos, como resultado de dar o prestar sin límites claros?"
+],
+"practica": "Escribí en tu lista del Octavo Paso el nombre de alguien a quien diste —dinero, tiempo o energía— sin límites claros, y el resentimiento o desequilibrio que eso produjo. Sé específico sobre qué diste y qué esperabas, aunque no lo dijeras en voz alta."
 },
 {
 "dia": "Viernes",
-"aspecto": "El amor no busca lo suyo",
-"versiculo": "1 Corintios 13:5",
-"texto": "\"El amor no hace nada indebido, no busca lo suyo, no se irrita, no guarda rencor.\"",
-"reflexion": "¿Pudiste ver dónde tus acciones fueron más sobre vos que sobre el otro?"
+"aspecto": "Explosiones emocionales tras periodos de represión",
+"ensenanza": "Una de las formas más desconcertantes de dañar a otros —y a nosotros mismos— es a través de explosiones emocionales que ocurren después de largos periodos de represión. Reprimimos el enojo, la frustración, el resentimiento durante semanas o meses, complaciendo y evitando conflicto, hasta que finalmente todo sale de golpe, de manera desproporcionada al incidente que lo disparó, hiriendo a quien esté cerca en ese momento.\n\nBeattie describe el costo de esta represión al hacer inventario de sí misma: \"Albergar coraje o resentimiento hacia nosotros mismos es devastador. Podemos pasar toda una vida castigándonos y permitiendo que otros nos dañen, también. Estoy aprendiendo que estaba tan enojada conmigo misma como con otros. Durante años, negué ambos enojos.\"\n\nEsta negación prolongada es precisamente lo que alimenta la explosión posterior. El enojo no expresado no desaparece — se acumula, y cuando finalmente encuentra una salida, suele hacerlo de manera descontrolada. El daño causado en esas explosiones —a menudo hacia las personas más cercanas, no hacia quien originó el resentimiento— es real, y necesita ser reconocido con la misma honestidad que cualquier otro daño en esta lista.",
+"historia": "Beattie ofrece un ejemplo directo entre sus ejemplos de reparaciones necesarias: \"Jake fue víctima de mi rabia desenfrenada.\" Nótese la palabra \"desenfrenada\" — sugiere precisamente una explosión, no una expresión medida y proporcional del enojo.\n\nLo revelador es que Jake, probablemente, no fue la causa original de ese enojo acumulado —fue quien estaba presente cuando finalmente salió. Este patrón es común: reprimimos con una persona (quizás porque tememos su reacción, o porque \"no vale la pena el conflicto\"), y explotamos con otra persona completamente distinta, que no tuvo nada que ver con la causa real del enojo.\n\nBeattie es clara sobre el propósito de nombrar esto en el inventario: no es para generar más culpa, sino para \"liberarnos de culpas, ansiedad, y discordia.\" Reconocer el patrón de represión-explosión es el primer paso para interrumpirlo, expresando el enojo de manera más directa y proporcional en el momento en que realmente surge.",
+"pasajePrincipal": {
+"ref": "Efesios 4:26-27",
+"texto": "\"Airaos, pero no pequéis; no se ponga el sol sobre vuestro enojo, ni deis lugar al diablo.\""
+},
+"contextoBiblico": "Pablo no prohíbe el enojo — lo valida como emoción legítima (\"airaos\") pero advierte sobre las consecuencias de guardarlo (\"no se ponga el sol sobre vuestro enojo\"). Esta instrucción, aplicada a diario, es precisamente el antídoto contra la explosión tras represión: procesar el enojo cerca del momento en que surge, en vez de acumularlo hasta que se vuelve incontrolable.",
+"pasajeApoyo": {
+"ref": "Proverbios 29:11",
+"texto": "\"El necio da rienda suelta a toda su ira, mas el sabio al fin la sosiega.\""
+},
+"conexion": "Efesios 4:26 nos instruye a no dejar que el sol se ponga sobre nuestro enojo — es decir, a procesarlo pronto, no reprimirlo indefinidamente. Proverbios 29:11 contrasta al necio, que da rienda suelta a toda su ira de golpe, con el sabio, que la sosiega con el tiempo. Las explosiones emocionales tras periodos de represión son exactamente lo que ambos textos advierten: el resultado de guardar el enojo demasiado tiempo, hasta que sale sin control, dañando a quien esté cerca.",
+"preguntas": [
+"Efesios 4:26 dice \"no se ponga el sol sobre vuestro enojo\" — procesalo pronto, no lo acumules. Explosiones emocionales tras periodos de represión son una de las características más desconcertantes de la codependencia porque el daño parece desproporcionado al incidente. ¿Recordás una explosión tuya reciente que en realidad venía de un enojo acumulado con otra persona o situación?",
+"Beattie describe a \"Jake\" como víctima de su \"rabia desenfrenada\" — probablemente sin ser la causa real del enojo. ¿Hay alguien en tu vida que haya recibido una explosión tuya que en realidad no le correspondía a él o ella?",
+"Proverbios 29:11 contrasta al necio, que explota, con el sabio, que sosiega su ira con el tiempo. ¿Qué necesitarías hacer diferente para expresar el enojo cerca del momento en que surge, en vez de reprimirlo hasta que explota?"
+],
+"practica": "Identificá con quién tenés una explosión pendiente de reconocer en tu lista del Octavo Paso. Escribí: \"[Nombre] recibió mi explosión de enojo que en realidad venía de [causa real, posiblemente otra persona o situación].\""
 },
 {
 "dia": "Sábado",
-"aspecto": "La restitución como acto concreto",
-"versiculo": "Lucas 19:8",
-"texto": "\"Zaqueo dijo: si en algo he defraudado a alguno, se lo devuelvo cuadruplicado.\"",
-"reflexion": "¿Estás genuinamente dispuesto a reparar el daño?"
+"aspecto": "Las tres listas — completando el inventario del daño",
+"ensenanza": "Después de ver esta semana cómo la manipulación, la confusión entre amor y lástima, la fusión emocional, el dar sin límites, y las explosiones tras represión causaron daño real —a otros y a nosotros mismos—, llegamos al corazón estructural del Octavo Paso: las tres listas.\n\nBeattie las describe con claridad: primero, la lista de quienes sentimos que nos dañaron a nosotros —que ayuda a procesar nuestra propia herida antes de examinar la ajena. Segundo, la lista central que pide el Paso: personas a quienes hemos dañado. Y tercero, la lista que muchos olvidan: \"el nombre que va en la tercera lista es el nuestro. Generalmente, nosotros mismos somos los más dañados por nuestra codependencia.\"\n\nEsta tercera lista es, quizás, la más sanadora: \"Privarnos o negar nuestras necesidades está mal. No confiar en, ni escucharnos a nosotros mismos está mal. No amarnos a nosotros mismos está mal.\" Cada característica que vimos esta semana —manipular, confundir amor con lástima, fusionarnos, dar sin límites, explotar tras reprimir— también nos dañó a nosotros mismos, no solo a quienes recibieron el comportamiento. Completar el inventario del Octavo Paso significa, finalmente, escribir nuestro propio nombre en la lista, con la misma honestidad y compasión que aplicamos a los demás.",
+"historia": null,
+"pasajePrincipal": {
+"ref": "Mateo 5:23-24",
+"texto": "\"Si traes tu ofrenda al altar, y allí te acuerdas de que tu hermano tiene algo contra ti, deja allí tu ofrenda... y anda, reconcíliate primero con tu hermano.\""
+},
+"contextoBiblico": "Jesús enseña esto en el Sermón del Monte, en el contexto de la adoración: incluso el acto religioso más importante (ofrecer sacrificio) debe pausarse si hay una relación rota pendiente de reparar. El orden que establece Jesús es notable: primero la reconciliación humana, luego la adoración formal. Esto refleja la prioridad que el Octavo Paso también establece: no podemos avanzar espiritualmente mientras cargamos daño sin reconocer hacia otros.",
+"pasajeApoyo": {
+"ref": "Salmo 51:6",
+"texto": "\"He aquí, tú amas la verdad en lo íntimo, y en lo secreto me has hecho comprender sabiduría.\""
+},
+"conexion": "Jesús pide reconciliación activa antes de la adoración formal; el Salmo 51 describe a un Dios que ama la verdad \"en lo íntimo\" —no solo la confesión externa, sino la honestidad profunda del corazón. Las tres listas del Octavo Paso —quienes nos dañaron, a quienes dañamos, y nosotros mismos— son exactamente ese trabajo de verdad íntima que ambos textos describen. Completar las tres, con la misma honestidad, es lo que nos prepara para el Noveno Paso: la reparación real.",
+"preguntas": [
+"Jesús pide reconciliarnos con el hermano antes de ofrecer nuestra ofrenda. De las tres listas que describe Beattie —quienes te dañaron, a quienes dañaste, y vos mismo— ¿cuál te ha costado más completar esta semana?",
+"Beattie dice que generalmente somos nosotros mismos los más dañados por nuestra propia codependencia. ¿Qué necesitás escribir en tu propia lista, sobre cómo te has dañado a vos mismo con alguna de las cinco características de esta semana?",
+"El Salmo 51:6 dice que Dios ama la verdad \"en lo íntimo\". ¿Qué verdad sobre el daño que causaste —o que te causaste a vos mismo— has evitado escribir con claridad hasta ahora?"
+],
+"practica": "Completá hoy, aunque sea parcialmente, las tres listas: personas que sentís que os dañaron, personas a quienes dañaste, y tu propio nombre con al menos una forma concreta en que te dañaste a vos mismo esta semana."
 }
 ]
 },
@@ -1368,14 +1580,152 @@ function PlaceholderDay({ d, i, sem, done, toggle, expanded, setExpanded }) {
   );
 }
 
+// ─── EXPORT HELPERS ─────────────────────────────────────────────────────────
+async function exportDayAsImage(sem, d, dayIndex) {
+  const node = document.getElementById(`infographic-${sem.numero}-${dayIndex}`);
+  if (!node || !window.html2canvas) return;
+  node.style.display = "block";
+  try {
+    const canvas = await window.html2canvas(node, { scale: 2, backgroundColor: "#0f1117", useCORS: true });
+    const link = document.createElement("a");
+    link.download = `Paso${sem.numero}_${d.dia}_${d.aspecto.replace(/[^a-zA-Z0-9]+/g,"_").slice(0,40)}.png`;
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  } catch(e) { console.error("Export failed", e); }
+  node.style.display = "none";
+}
+
+function exportDayAsPDF(sem, d, dayIndex) {
+  const printNode = document.getElementById(`printarea-${sem.numero}-${dayIndex}`);
+  if (!printNode) return;
+  const existing = document.getElementById("print-area");
+  if (existing) existing.remove();
+  const clone = printNode.cloneNode(true);
+  clone.id = "print-area";
+  clone.style.display = "block";
+  document.body.appendChild(clone);
+  setTimeout(() => { window.print(); clone.remove(); }, 100);
+}
+
+// Infographic visual template (rendered off-screen, captured via html2canvas)
+function InfographicTemplate({ sem, d, dayIndex }) {
+  return (
+    <div id={`infographic-${sem.numero}-${dayIndex}`} style={{display:"none",width:800,padding:0,background:"#0f1117",fontFamily:"'Lato',sans-serif"}}>
+      <div style={{background:`linear-gradient(135deg, ${sem.color}, ${sem.color}cc)`,padding:"36px 44px 28px"}}>
+        <div style={{fontSize:13,color:"#ffffffcc",letterSpacing:3,fontWeight:700,marginBottom:8}}>{sem.paso.toUpperCase()} · {d.dia.toUpperCase()}</div>
+        <div style={{fontFamily:"'Playfair Display',serif",fontSize:30,color:"#fff",fontWeight:700,lineHeight:1.2}}>{d.aspecto}</div>
+      </div>
+      <div style={{padding:"36px 44px"}}>
+        {/* verse */}
+        <div style={{background:"#1a1d26",borderLeft:`4px solid ${sem.color}`,borderRadius:"0 10px 10px 0",padding:"22px 26px",marginBottom:28}}>
+          <div style={{fontSize:12,color:sem.color,fontWeight:700,letterSpacing:2,marginBottom:10}}>{(d.pasajePrincipal?d.pasajePrincipal.ref:d.versiculo||"").toUpperCase()}</div>
+          <div style={{fontFamily:"'Playfair Display',serif",fontSize:19,color:"#e8dcc0",lineHeight:1.6,fontStyle:"italic"}}>{d.pasajePrincipal?d.pasajePrincipal.texto:d.texto}</div>
+        </div>
+        {/* teaching excerpt */}
+        <div style={{marginBottom:28}}>
+          <div style={{fontSize:11,color:"#888",fontWeight:700,letterSpacing:2,marginBottom:10}}>ENSEÑANZA DEL DÍA</div>
+          <div style={{fontSize:15,color:"#c8beac",lineHeight:1.8}}>
+            {(d.ensenanza?d.ensenanza.split("\n\n")[0]:d.reflexion||"").slice(0,420)}{(d.ensenanza && d.ensenanza.length>420)?"...":""}
+          </div>
+        </div>
+        {/* questions */}
+        <div style={{background:"#161922",borderRadius:12,padding:"24px 26px",marginBottom:8}}>
+          <div style={{fontSize:11,color:"#888",fontWeight:700,letterSpacing:2,marginBottom:14}}>✦ PREGUNTAS DE REFLEXIÓN</div>
+          {(d.preguntas||[]).map((q,qi)=>(
+            <div key={qi} style={{display:"flex",gap:12,marginBottom:qi<((d.preguntas||[]).length-1)?16:0}}>
+              <div style={{width:24,height:24,borderRadius:"50%",background:`${sem.color}30`,border:`1px solid ${sem.color}`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:700,color:sem.color,flexShrink:0}}>{qi+1}</div>
+              <div style={{fontSize:14,color:"#a89e8c",lineHeight:1.7}}>{q}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style={{padding:"18px 44px",borderTop:"1px solid #1e2130",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+        <div style={{fontSize:11,color:"#555",letterSpacing:1}}>GUÍA BÍBLICA · 12 PASOS · LIBERTAD DE LA CODEPENDENCIA</div>
+        <div style={{fontSize:16,color:sem.color}}>✦</div>
+      </div>
+    </div>
+  );
+}
+
+// Print-friendly text template (hidden, used for PDF export via window.print)
+function PrintTemplate({ sem, d, dayIndex }) {
+  const verses = [];
+  if (d.pasajePrincipal) verses.push(d.pasajePrincipal);
+  if (d.pasajeApoyo) verses.push(d.pasajeApoyo);
+  return (
+    <div id={`printarea-${sem.numero}-${dayIndex}`} style={{display:"none",fontFamily:"Georgia,serif",color:"#111",maxWidth:700,margin:"0 auto"}}>
+      <div style={{borderBottom:"2px solid #333",paddingBottom:12,marginBottom:20}}>
+        <div style={{fontSize:11,letterSpacing:2,color:"#666",marginBottom:4}}>{sem.paso.toUpperCase()} · {d.dia.toUpperCase()}</div>
+        <h1 style={{fontSize:24,margin:0}}>{d.aspecto}</h1>
+      </div>
+      {d.ensenanza && <div style={{marginBottom:18}}>
+        <h3 style={{fontSize:13,letterSpacing:1,color:"#555"}}>ENSEÑANZA DEL DÍA</h3>
+        {d.ensenanza.split("\n\n").map((p,idx)=><p key={idx} style={{fontSize:13,lineHeight:1.7}}>{p}</p>)}
+      </div>}
+      {d.historia && <div style={{marginBottom:18}}>
+        <h3 style={{fontSize:13,letterSpacing:1,color:"#555"}}>HISTORIA DEL DÍA</h3>
+        {d.historia.split("\n\n").map((p,idx)=><p key={idx} style={{fontSize:13,lineHeight:1.7,fontStyle:"italic"}}>{p}</p>)}
+      </div>}
+      {verses.map((v,vi)=>(
+        <div key={vi} style={{marginBottom:14,paddingLeft:14,borderLeft:"3px solid #999"}}>
+          <div style={{fontSize:11,fontWeight:"bold",color:"#555"}}>{v.ref}</div>
+          <div style={{fontSize:14,fontStyle:"italic"}}>{v.texto}</div>
+        </div>
+      ))}
+      {d.contextoBiblico && <div style={{marginBottom:18}}>
+        <h3 style={{fontSize:13,letterSpacing:1,color:"#555"}}>CONTEXTO BÍBLICO</h3>
+        <p style={{fontSize:13,lineHeight:1.7}}>{d.contextoBiblico}</p>
+      </div>}
+      {d.conexion && <div style={{marginBottom:18}}>
+        <h3 style={{fontSize:13,letterSpacing:1,color:"#555"}}>CONEXIÓN CON EL PASO</h3>
+        <p style={{fontSize:13,lineHeight:1.7}}>{d.conexion}</p>
+      </div>}
+      {d.preguntas && <div style={{marginBottom:18}}>
+        <h3 style={{fontSize:13,letterSpacing:1,color:"#555"}}>PREGUNTAS DE REFLEXIÓN</h3>
+        <ol style={{fontSize:13,lineHeight:1.9,paddingLeft:20}}>
+          {d.preguntas.map((q,qi)=><li key={qi} style={{marginBottom:8}}>{q}</li>)}
+        </ol>
+      </div>}
+      {d.practica && <div style={{marginBottom:18,background:"#f0f0f0",padding:14,borderRadius:6}}>
+        <h3 style={{fontSize:13,letterSpacing:1,color:"#555",margin:"0 0 6px"}}>PRÁCTICA CONCRETA</h3>
+        <p style={{fontSize:13,lineHeight:1.7,margin:0}}>{d.practica}</p>
+      </div>}
+    </div>
+  );
+}
+
+function ExportMenu({ sem, d, dayIndex, onClose }) {
+  const [exporting, setExporting] = useState(false);
+  useEffect(() => {
+    const handler = () => onClose();
+    document.addEventListener("click", handler);
+    return () => document.removeEventListener("click", handler);
+  }, []);
+  return (
+    <div className="export-menu" style={{position:"absolute",right:0,top:"100%",marginTop:6,background:"#181b24",border:"1px solid #2a2d3a",borderRadius:10,boxShadow:"0 8px 24px rgba(0,0,0,0.5)",zIndex:50,minWidth:200,overflow:"hidden"}} onClick={e=>e.stopPropagation()}>
+      <button className="export-btn" disabled={exporting} onClick={async()=>{setExporting(true);await exportDayAsImage(sem,d,dayIndex);setExporting(false);onClose();}}
+        style={{width:"100%",textAlign:"left",padding:"11px 16px",background:"transparent",border:"none",color:"#ccc",fontSize:13,fontFamily:"'Lato',sans-serif",display:"flex",alignItems:"center",gap:10,borderBottom:"1px solid #2a2d3a"}}>
+        <span style={{fontSize:15}}>🖼️</span> {exporting?"Generando...":"Descargar imagen"}
+      </button>
+      <button className="export-btn" onClick={()=>{exportDayAsPDF(sem,d,dayIndex);onClose();}}
+        style={{width:"100%",textAlign:"left",padding:"11px 16px",background:"transparent",border:"none",color:"#ccc",fontSize:13,fontFamily:"'Lato',sans-serif",display:"flex",alignItems:"center",gap:10}}>
+        <span style={{fontSize:15}}>📄</span> Guardar como PDF
+      </button>
+    </div>
+  );
+}
+
 // ─── FULL DAY ─────────────────────────────────────────────────────────────────
 function FullDay({ d, i, sem, done, toggle, expanded, setExpanded }) {
   const k = `${sem.numero}-${i}`;
   const isDone = !!done[k];
   const isExp = expanded === i;
+  const [showExport, setShowExport] = useState(false);
 
   return (
     <div className="day-card" style={{background:isDone?`${sem.color}10`:"#13161f",border:`1px solid ${isDone?sem.color+"50":"#1e2130"}`,borderRadius:12,overflow:"hidden"}}>
+      <InfographicTemplate sem={sem} d={d} dayIndex={i} />
+      <PrintTemplate sem={sem} d={d} dayIndex={i} />
       {/* Header */}
       <div style={{display:"flex",alignItems:"center",gap:14,padding:"16px 20px",cursor:"pointer"}} onClick={()=>setExpanded(isExp?null:i)}>
         <div className="check-circle" onClick={e=>{e.stopPropagation();toggle(sem.numero,i);}}
@@ -1389,6 +1739,14 @@ function FullDay({ d, i, sem, done, toggle, expanded, setExpanded }) {
             <span style={{fontFamily:"'Lato',sans-serif",fontSize:14,color:isDone?"#c8b880":"#bbb",fontWeight:isDone?700:400}}>{d.aspecto}</span>
           </div>
           <div style={{fontFamily:"'Lato',sans-serif",fontSize:11,color:"#555"}}>{d.pasajePrincipal.ref} · {d.pasajeApoyo.ref}</div>
+        </div>
+        <div style={{position:"relative",flexShrink:0}}>
+          <button className="export-btn no-print" onClick={e=>{e.stopPropagation();setShowExport(!showExport);}}
+            title="Exportar este día"
+            style={{background:"transparent",border:"1px solid #2a2d3a",borderRadius:6,width:30,height:30,display:"flex",alignItems:"center",justifyContent:"center",color:"#777",fontSize:13}}>
+            ⬇
+          </button>
+          {showExport && <ExportMenu sem={sem} d={d} dayIndex={i} onClose={()=>setShowExport(false)} />}
         </div>
         <svg className="expand-arrow" style={{transform:isExp?"rotate(180deg)":"rotate(0deg)",flexShrink:0}} width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path d="M4 6L8 10L12 6" stroke="#444" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
